@@ -47,17 +47,65 @@ body {
     border-bottom: 4px solid black;
     min-height: 8%;
     font-weight: 600;
-    padding: 4%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.body-container  > aside > section:nth-of-type(1) {
+.channels-container {
+    background-color: #F6E2F4;
+    height: 38.5%;
+}
+
+.channels-container > h3 {
     background-color: #F6E2F4;
 }
 
-.body-container  > aside > section:nth-of-type(2) {
+.users-container {
+    background-color: #D3DFCE;
+    height: 60.5%;
+}
+
+.users-container > h3 {
     background-color: #D3DFCE;
 }
 
+aside > section > h3 {
+    margin: 0;
+    padding: 5%;
+    border-bottom: 4px solid black;
+    position: sticky;
+    top: 0;
+}
+
+aside > section > ul {
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    list-style-type: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 4%;
+    cursor: pointer;
+} 
+
+.list-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.active {
+    background-color: rgb(0, 0, 0) !important;
+    color: white;
+}
+
+.unread {
+    color: rgb(255, 0, 0);
+}
+
+
+/* MAIN CONTAINER */
 main {
     display: flex;
     flex-direction: column;
@@ -122,8 +170,6 @@ section > button {
     cursor: pointer;
 }
 
-
-
 section > button:active {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -181,3 +227,4 @@ section > button:active {
             transform: translateY(20px);
     }
 }
+
